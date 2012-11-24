@@ -1,0 +1,19 @@
+### Introduction
+
+XMOS is the designer and manufacturer of a family of microcontrollers offering a fast 32b CPU with an interesting concurrency model based on hardware-supported threading.
+
+Their lowest cost devboard is the XCARD XK-1A, which, at $60 offers you _two_ XS-L1 uCs, one in TQ128 on a breakout, and the other in TQ64 complete with a high-speed USB transceiver and 13MHz crystal.
+
+XMOS intends for the USB-enabled device to be used as a debug & commmunication gateway for the second chip, but the runtime loading of application code means that it can, theoretically, be used as a general purpose devboard for the creation of USB-enabled XMOS devices. 
+
+The low pin count available does restrict the number of possibilities, but it's still more than sufficient to get started with the system.
+
+XMOS provides decent documentation for the bootloader, but doesn't offer a general-purpose tool for loading user-specific firmware onto the device. 
+
+This project is that missing piece.
+
+-----
+
+### DigiKey
+
+Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND".
