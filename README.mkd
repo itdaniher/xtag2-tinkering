@@ -26,6 +26,7 @@ Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
 
 
 <code>
+
 	=====  ======  ======  =======  ================
 	 Pin    1bit    4bit    8bit         Signal
 	=====  ======  ======  =======  ================
