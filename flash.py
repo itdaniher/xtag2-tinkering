@@ -18,7 +18,7 @@ loader_cmd_type = dict(zip([
 	"LOADER_CMD_JUMP_ACK"], range(6)))
 
 # big endian
-_32to8 = lambda thirtyTwo: [(thirtyTwo >> 24), (thirtyTwo >> 16) & 0xFF, (thirtyTwo >> 8) & 0xFF, (thirtyTwo & 0xFF)]
+#_32to8 = lambda thirtyTwo: [(thirtyTwo >> 24), (thirtyTwo >> 16) & 0xFF, (thirtyTwo >> 8) & 0xFF, (thirtyTwo & 0xFF)]
 # little endian
 _32to8 = lambda thirtyTwo: [(thirtyTwo&0xFF), (thirtyTwo >> 8) & 0xFF, (thirtyTwo >> 16) & 0xFF, ( (thirtyTwo >> 24)& 0xFF)]
 
@@ -80,7 +80,11 @@ def load_firmware(byte_array):
 		pass
 
 if __name__ == "__main__":
-	# sample mouse HID firmware
-	import app_l1_hid
-	# load it!
-	load_firmware(_flatten(map(_32to8, app_l1_hid.burnData)))
+	try:
+		import sys
+		burnData = map(ord, open(sys.argv[1]).read())
+	except:
+		print "usage: 'python load.py firmware.bin'"
+		print "using app_l1_hid.bin as source of basic HID firmware"
+		burnData = map(ord, open("app_l1_hid.bin").read())
+	load_firmware(burnData)
