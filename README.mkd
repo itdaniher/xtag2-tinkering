@@ -16,4 +16,55 @@ This project is that missing piece.
 
 ### DigiKey
 
-Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND".
+Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
+
+-----
+
+### XTAG2 Hardware
+
+* ULPI USB Reset is on "XS1_PORT_1I"
+
+
+	=====  ======  ======  =======  ================
+	 Pin    1bit    4bit    8bit         Signal
+	=====  ======  ======  =======  ================
+	X0D0   P1A0                     TARGET_TDO
+	X0D1   P1B0                     TARGET_TDI
+	X0D4           P4B0             TARGET_XLINK_TO_TARGET_1
+	X0D5           P4B1             TARGET_XLINK_TO_TARGET_0
+	X0D6           P4B2             TARGET_XLINK_FROM_TARGET_0
+	X0D7           P4B3             TARGET_XLINK_FROM_TARGET_1
+	X0D10  P1C0                     TARGET_TMS
+	X0D11  P1D0                     TARGET_TCK
+	X0D25  P1J0                     TARGET_UART_TO_TARGET
+	X0D26          P4E0             TARGET_UART_FROM_TARGET
+	X0D34  P1K0                     TARGET_DBG
+	X0D35  P1L0                     TARGET_TRST_N
+	X0D36  P1M0                     TARGET_RST_N
+	=====  ======  ======  =======  ================
+
+
+	====  ===========================
+	Pin   Signal  
+	====  ===========================
+	1     5V (optional, NC otherwise) 
+	3     TRST_N 
+	4     GND
+	5     TDO (output by the target) 
+	6     XLINK_FROM_TARGET_1 
+	7     TMS 
+	8     GND
+	9     TCK 
+	10    XLINK_FROM_TARGET_0 
+	11    DBG
+	12    GND
+	13    TDI (input to the target) 
+	14    XLINK_TO_TARGET_0 
+	15    RESET_N
+	16    GND
+	17    UART  (to the target) 
+	18    XLINK_TO_TARGET_1 
+	19    UART  (to the target) 
+	20    GND 
+	====  ===========================
+
