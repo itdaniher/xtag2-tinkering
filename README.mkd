@@ -26,7 +26,6 @@ Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
 
 
 <code>
-
 	=====  ======  ======  =======  ================
 	 Pin    1bit    4bit    8bit         Signal
 	=====  ======  ======  =======  ================
@@ -70,5 +69,4 @@ Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
 	19    UART  (to the target) 
 	20    GND 
 	====  ===========================
-
 </code>
