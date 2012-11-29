@@ -6,8 +6,6 @@ Their lowest cost devboard is the XCARD XK-1A, which, at $60 offers you _two_ XS
 
 XMOS intends for the USB-enabled device to be used as a debug & commmunication gateway for the second chip, but the runtime loading of application code means that it can, theoretically, be used as a general purpose devboard for the creation of USB-enabled XMOS devices. 
 
-The low pin count available does restrict the number of possibilities, but it's still more than sufficient to get started with the system.
-
 XMOS provides decent documentation for the bootloader, but doesn't offer a general-purpose tool for loading user-specific firmware onto the device. 
 
 This project is that missing piece.
@@ -30,25 +28,26 @@ Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
 	=====  ======  ======  =======  ================
 	 Pin    1bit    4bit    20pin       Signal
 	=====  ======  ======  =======  ================
+	VUSB                    1
+	X0D35  P1L0             3       TARGET_TRST_N
 	X0D0   P1A0             5       TARGET_TDO
-	X0D1   P1B0             13      TARGET_TDI
-	X0D4           P4B0     18      TARGET_XLINK_TO_TARGET_1
-	X0D5           P4B1     14      TARGET_XLINK_TO_TARGET_0
-	X0D6           P4B2     10      TARGET_XLINK_FROM_TARGET_0
-	X0D7           P4B3     6       TARGET_XLINK_FROM_TARGET_1
 	X0D10  P1C0             7       TARGET_TMS
 	X0D11  P1D0             9       TARGET_TCK
+	X0D34  P1K0             11      TARGET_DBG
+	X0D1   P1B0             13      TARGET_TDI
+	X0D36  P1M0             15      TARGET_RST_N
 	X0D25  P1J0             17      TARGET_UART_TO_TARGET
 	X0D26          P4E0     19      TARGET_UART_FROM_TARGET
-	X0D34  P1K0             11      TARGET_DBG
-	X0D35  P1L0             3       TARGET_TRST_N
-	X0D36  P1M0             15      TARGET_RST_N
+	NC                      2
 	GND                     4
+	X0D7           P4B3     6       TARGET_XLINK_FROM_TARGET_1
 	GND                     8
+	X0D6           P4B2     10      TARGET_XLINK_FROM_TARGET_0
 	GND                     12
+	X0D5           P4B1     14      TARGET_XLINK_TO_TARGET_0
 	GND                     16
+	X0D4           P4B0     18      TARGET_XLINK_TO_TARGET_1
 	GND                     20
-	VUSB                    1
 	=====  ======  ======  =======  ================
 	
 </code>
