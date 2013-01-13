@@ -51,3 +51,5 @@ Order the XTAG2 on DigiKey for $19! Part number "XCARD XTAG-2-ND"
 	=====  ======  ======  =======  ================
 	
 </code>
+
+CAVEAT: all pins on all four-bit ports cannot be used in applications using XUD, XMOS's USB stack. See the [XS-1 Design Guide](http://www.xmos.com/download/public/XS1-L-Hardware-Design-Checklist%28X6277C%29.pdf) for details.
